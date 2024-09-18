@@ -1,0 +1,48 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style-login.css' %}">
+
+        <div class="wrapper" >
+
+            <form  method="post" action="{% url 'signup' %}" >
+
+                <h1 class="h1">ثبت نام</h1>
+
+                <div class="input-box1" >
+
+                    {% csrf_token %}
+
+                    <input type="text" placeholder="    نام کاربری"  name="username" class="form-control">
+
+                    <image src="{% static  'assets/UserLogin.png' %}" class="icon" ></image>
+
+                    <br>
+                    <br>
+
+                    <input type="password" placeholder="    گذرواژه" name="password" class="form-control" >
+                    <image src="{% static  'assets/lock.png' %}" class="icon" style="margin-top: 68px" ></image>
+
+                    <br>
+                    <br>
+
+                    <input type="password" placeholder="    تکرار گذرواژه" name="password" class="form-control" >
+
+                    <image src="{% static  'assets/lock.png' %}" class="icon" style="margin-top: 135px" ></image>
+
+                </div>
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+
+                <div class="remember-forget" >
+
+                    <label ><input type="checkbox" >مرا به خاطر بسپار</label>
+
+                </div>
+
+                <button type="submit" class="btn"  >ثبت نام</button>
+
+                <div class="register-link"><p>حساب کاربری دارید؟  <a href="{% url 'Login' %}">وارد شوید </a></p></div>
+
+            </form>
+
+        </div>
+

@@ -1,0 +1,115 @@
+{% load static %}
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" >
+
+    <nav>
+
+        <a href="#">
+
+            <img src="{% static 'assets/logo2png.png' %}"  width="100" alt="">
+
+        </a>
+
+        <div class="nav-contry" >
+
+            <img src="{% static 'assets/location_icon.png' %}" height="20" alt="">
+
+            <div>
+
+                <p>ارسال به</p>
+
+                <h1>تهران</h1>
+
+            </div>
+
+        </div>
+
+        <div class="nav-search" style="height: 40px;border-radius: 15px">
+
+            <div class="nav-search-category" style="height: inherit;border-radius: 15px">
+
+                <p>
+                    <div class="nav-search-category"  >
+
+                    <select class="form-select" aria-label="Default select example" onchange="location = this.value;" style="background:#e5e5e5; border: none">
+                        <option value="{% url 'category_summary' %}" >همه</option>
+                        <option value="{% url 'category' 'لوازم جانبی کامپیوتر' %}">لوازم جانبی کامپیوتر</option>
+                        <option value="{% url 'category' 'پوشاک' %}">پوشاک</option>
+                        <option value="{% url 'category' 'غذای حیوانات' %}">غذای حیوانات</option>
+                        <option value="{% url 'category' 'جدیدترین تکنولوژی' %}">تکنولوژی روز</option>
+                        <option value="{% url 'category' 'محصولات بهداشتی' %}">محصولات بهداشتی</option>
+                        <option value="{% url 'category' 'مانیتور بازی' %}">مانیتور بازی</option>
+                        <option value="{% url 'category' 'تجهیزات اداری' %}">صندلی اداری</option>
+                        <option value="{% url 'category' 'لپ تاپ مطالعه' %}">لپ تاپ</option>
+                        <option value="{% url 'category' 'لوازم تحریر' %}">لوازم تحریر </option>
+                    </select>
+
+            </div>
+                </p>
+
+            </div>
+
+            <input type="text" class="nav-search-input" placeholder="بگرد و پیدا کن" style="height: 40px;border-radius: 15px">
+
+            <img src="{% static 'assets/search_icon.png' %}" class="nav-search-icon">
+
+        </div>
+
+        <div class="nav-lang">
+
+
+            <p>فارسی</p>
+
+            <img src="{% static 'assets/dropdown_icon.png' %}" width="8px" alt="">
+
+        </div>
+
+
+
+        <a href=# class="mobile-user-icon" style="display: none;">
+
+            <img src="{% static 'assets/user.png' %}" alt="">
+        </a>
+
+        <div class="nav-text" >
+
+            {% if user.is_authenticated %}
+                <p >
+                    <a href="{% url 'Login' %}" style="font-size: 15px ;margin-left: -7px;">ویرایش</a>
+
+                    <a href="{% url 'logout' %}" style="font-size: 13px ;margin-left: -7px;">خروج</a>
+                </p>
+{#                <p ><a href="{% url 'Login' %}" style="font-size: 15px ;margin-left: -7px;">ویرایش</a></p>#}
+
+            {% else %}
+
+                <div class="nav-text">
+
+            <p>ورود/ ثبت نام</p>
+
+            <h1><a href={% url 'Login' %}>حساب کاربری <img src="{% static 'assets/dropdown_icon.png' %}" width="8px" alt=""></a></h1>
+
+
+        </div>
+
+            {% endif %}
+
+        </div>
+
+        <a href="{% url 'Login' %}" class="mobile-user-icon" >
+
+            <img src="{% static 'assets/user.png' %}" alt="" style="max-width: 30px">
+        </a>
+
+        <div class="nav-text" >
+
+        </div>
+
+        <a  href="../../cart/templates/cart_summary.html" class="nav-cart" >
+
+            <img src="{% static 'assets/cart_icon.png' %}" width="35" alt="">
+
+            <span class="badge bg-light text-black ms-1 rounded-pill" id="cart-quantity" style="margin-right: 5px">{{ cart|length }}</span>
+
+        </a>
+
+    </nav>

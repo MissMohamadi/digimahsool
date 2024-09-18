@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+{% load humanize %}
+
+    <title>ارسال رایگان</title>
+
+    <div class="box-row " >
+
+    {% for item in products %}
+
+        {% if item.is_sale %}
+
+        <div class="box-col">
+
+            <img src="{{ item.picture.url }}" alt="">
+
+            <h3>{{ item.name }}</h3>
+            <div class="d-flex justify-content-center small text-warning mb-2" style="display: flex ; color: #fddb01">
+
+            {% with ''|center:item.star as range %}
+                {% for _ in range %}
+                    <div class="bi-star-fill"></div>
+                {% endfor %}
+            {% endwith %}
+            </div>
+
+            <h5><strike>{{item.price | intcomma}}</strike></h5>
+
+            <h5>{{item.sale_price | intcomma}} تومان</h5>
+
+            <a href="#" style="text-decoration: none">افزودن به سبد خرید</a>
+
+        </div>
+
+        {% else %}
+
+            <div class="box-col">
+
+            <img src="{{ item.picture.url }}" alt="">
+
+            <h3>{{ item.name }}</h3>
+
+                <div class="d-flex justify-content-center small text-warning mb-2" style="display: flex ; color: #fddb01">
+
+            {% with ''|center:item.star as range %}
+                {% for _ in range %}
+                    <div class="bi-star-fill"></div>
+                {% endfor %}
+            {% endwith %}
+            </div>
+
+            <h5>{{ item.price | intcomma}} تومان </h5>
+
+            <a href="#" style="text-decoration: none">افزودن به سبد خرید</a>
+            </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+
+{% endblock %}

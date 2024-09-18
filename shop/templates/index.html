@@ -1,0 +1,456 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+    <div class="nav-bottom">
+
+    </div>
+
+    <div class="header-slider">
+
+        <a href="#" class="control-prev">&#129144</a>
+
+        <a href="#" class="control-next">&#129146</a>
+
+        <ul>
+
+            <img src="{% static 'assets/Picture1.png' %}" class="header-img" alt="">
+
+            <img src="{% static 'assets/Picture2.png' %}" class="header-img" alt="">
+
+            <img src="{% static 'assets/Picture3.png' %}" class="header-img" alt="">
+
+            <img src="{% static 'assets/Picture4.png' %}" class="header-img" alt="">
+
+            <img src="{% static 'assets/Picture5.png' %}" class="header-img" alt="">
+
+            <img src="{% static 'assets/Picture6.png' %}" class="header-img" alt="">
+
+
+        </ul>
+
+    </div>
+
+    <div class="box-row header-box">
+
+        <div class="box-col">
+
+            <h3>ارسال رایگان</h3>
+
+            <img src="{% static 'assets/box1-1.jpg' %}" alt="">
+
+            <a href="{% url 'FreeDelivery' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>سال نو</h3>
+
+            <img src="{% static 'assets/box1-2.jpg' %}" alt="">
+
+            <a href="{% url 'NewYear' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>اجناس کمتر از200 هزارتومان</h3>
+
+            <img src="{% static 'assets/box1-3.jpg' %}" alt="">
+
+            <a href="{% url 'Bellow200' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3> لوازم جانبی کامپیوتر </h3>
+
+            <img src="{% static 'assets/box1-4.jpg' %}" alt="">
+
+            <a href="{% url 'JanebiPc' %}">محصولات بیشتر</a>
+
+        </div>
+
+
+    </div>
+
+    <div class="box-row ">
+
+        <div class="box-col">
+
+            <h3>محصولات بهداشتی</h3>
+
+            <img src="{% static 'assets/box2-1.jpg' %}" alt="">
+
+            <a href="{% url 'Behdashti' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3> تکنولوژی روز</h3>
+
+            <img src="{% static 'assets/box2-2.jpg' %}" alt="">
+
+            <a href="{% url 'NewTechnology' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>غذای حیوانات</h3>
+
+            <img src="{% static 'assets/box2-3.jpg' %}" alt="">
+
+            <a href="{% url 'PetFood' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>پوشاک </h3>
+
+            <img src="{% static 'assets/box2-4.jpg' %}" alt="">
+
+            <a href="{% url 'Pushak' %}">محصولات بیشتر</a>
+
+        </div>
+
+
+    </div>
+
+    <div class="Product-slider" dir="rtl">
+
+        <h2>پرفروش ترین محصولات ورزشی</h2>
+
+        <div class="products">
+
+            <img src="{% static 'assets/product1-1.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-2.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-3.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-4.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-5.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-6.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-7.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-8.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-9.jpg' %}" alt="">
+
+            <img src="{% static 'assets/product1-10.jpg' %}" alt="">
+
+        </div>
+
+
+    </div>
+
+    <div class="box-row ">
+
+        <div class="box-col">
+
+            <h3>لوازم تحریر</h3>
+
+            <img src="{% static 'assets/box3-1.jpg' %}" alt="">
+
+            <a href="{% url 'Stationary' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>لپ تاپ </h3>
+
+            <img src="{% static 'assets/box3-2.jpg' %}" alt="">
+
+            <a href="{% url 'Laptop' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>صندلی اداری</h3>
+
+            <img src="{% static 'assets/box3-3.jpg' %}" alt="">
+
+            <a href="{% url 'Office' %}">محصولات بیشتر</a>
+
+        </div>
+
+        <div class="box-col">
+
+            <h3>مانیتور بازی</h3>
+
+            <img src="{% static 'assets/box3-4.jpg' %}" alt="">
+
+            <a href="{% url 'GamingMonitor' %}">محصولات بیشتر</a>
+
+        </div>
+
+
+    </div>
+
+    <div class="product-slider-with-price" dir="rtl">
+
+        <h2>محصولات کمتر از 250 هزارتومان</h2>
+
+        <div class="products">
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-1.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span>   آخرین قیمت: تومان350000</p>
+
+                <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-2.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-3.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-4.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-5.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"><span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-6.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"><span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-7.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-8.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-9.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-10.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-img-container">
+
+                    <img src="{% static 'assets/product2-11.jpg' %}" alt="">
+
+                </div>
+
+                <div class="product-offer">
+
+                    <p>27% تخفیف</p>
+
+                    <span>حراج</span>
+
+                </div>
+
+                <p class="product-price"> <span><strike>500000</strike></span> آخرین قیمت:تومان350000</p>
+
+                    <h4>بهترین محصول برای شما</h4>
+
+            </div>
+
+
+        </div>
+
+    </div>
+        <script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
